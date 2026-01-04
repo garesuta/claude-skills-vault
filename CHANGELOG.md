@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Fixed
+
+## [1.0.3] - 2026-01-05
+
+### Added
 - **skills**: Add gemini-cli skill for local Gemini CLI interaction (run queries, compare responses)
 - **skills**: Add fastapi-senior-dev skill for production-ready FastAPI development
 - **skills**: Add testing-automation-expert skill for comprehensive testing strategies
@@ -16,8 +24,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 - **commands**: Rename commit.md to git-commit.md for clarity
 - **commands**: Rename push.md to git-push.md for clarity
-
-### Fixed
+- **readme**: Update commands table (renamed commands, add plan-feature)
+- **readme**: Add new skills to Core Skills table
+- **readme**: Add Changelog section with link to CHANGELOG.md
 
 ## [1.0.2] - 2026-01-04
 

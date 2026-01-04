@@ -10,10 +10,13 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 
 | Skill | Description |
 |-------|-------------|
+| **fastapi-senior-dev** | Senior Python Backend Engineer skill for production-ready FastAPI |
+| **gemini-cli** | Run Gemini CLI for AI queries and comparisons |
 | **mcp-builder** | Guide for creating high-quality MCP servers (Python/TypeScript) |
 | **pydantic-model** | Pydantic v2 model patterns for validation and MongoDB |
 | **skill-creator** | Guide for creating Claude Code skills |
 | **system-architect** | System architecture patterns and design guidance |
+| **testing-automation-expert** | Production-grade testing strategies (pytest, Jest, Playwright) |
 | **token-formatter** | Token compression and formatting utilities |
 
 ### Document Skills
@@ -31,10 +34,10 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 
 | Command | Description |
 |---------|-------------|
-| `/add-mcp` | Create and configure new MCP servers |
-| `/commit` | Safe git commit with conventional commits format |
+| `/git-commit` | Safe git commit with conventional commits format |
+| `/git-push` | Git push with uncommitted changes check and changelog versioning |
 | `/create-skill` | Create new skills from templates |
-| `/push` | Git push with uncommitted changes check and changelog versioning |
+| `/plan-feature` | Production-grade feature planning with multi-source validation |
 
 ## MCP Servers
 
@@ -161,6 +164,10 @@ Contributions are welcome! Feel free to submit pull requests with new skills, co
 Created by **George Khananaev**
 
 Skills sourced from [ComposioHQ](https://github.com/ComposioHQ): document-skills (xlsx, docx, pptx, pdf), project-change-log, skill-creator, mcp-builder
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
 ## License
 

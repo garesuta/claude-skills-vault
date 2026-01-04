@@ -13,6 +13,7 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 | **pydantic-model** | Pydantic v2 model patterns for validation and MongoDB |
 | **skill-creator** | Guide for creating Claude Code skills |
 | **token-formatter** | Token compression and formatting utilities |
+| **mcp-builder** | Guide for creating high-quality MCP servers (Python/Node) |
 | **project-change-log** | Automatic CHANGELOG.md maintenance |
 
 ### Document Skills
@@ -57,7 +58,7 @@ cp -r claude-skills-vault/.claude your-project/
 
 Created by **George Khananaev**
 
-Skills sourced from [ComposioHQ](https://github.com/ComposioHQ): document-skills, pydantic-model, skill-creator
+Skills sourced from [ComposioHQ](https://github.com/ComposioHQ): document-skills (xlsx, docx, xlsx, pdf), project-change-log, skill-creator, mcp-builder
 
 ## License
 

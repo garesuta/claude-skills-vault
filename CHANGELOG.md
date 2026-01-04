@@ -8,9 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **skills**: Add mcp-builder skill with Python/Node reference docs and evaluation scripts
+- **skills**: Add toon skill for token-optimized JSON notation (~40% token reduction)
+- **commands**: Add comprehensive create-skill command with testing requirements
+- **commands**: Add add-mcp command for MCP server setup
 
 ### Changed
 - **commands**: Clarify changelog requirement in commit command as REQUIRED step
+- **commands**: Compress commit.md using token-formatter (~54% reduction)
+- **skills**: Add author credits to document-skills (ComposioHQ for xlsx/pdf/pptx/docx, George Khananaev for toon/md)
+- **skills**: Add YAML frontmatter to token-formatter and md skills
 
 ### Fixed
 

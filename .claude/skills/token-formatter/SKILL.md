@@ -1,3 +1,9 @@
+---
+name: token-formatter
+description: Convert verbose docs/markdown/text into token-efficient formats. Use when user wants to reduce token count, compress content for LLM context, or optimize for AI consumption.
+author: George Khananaev
+---
+
 # Token Formatter Skill
 
 Convert verbose documentation, markdown, and text files into token-efficient formats while preserving essential information.
@@ -398,6 +404,41 @@ python .claude/skills/token-formatter/scripts/count_tokens.py document.md README
 # Count tokens from pipe
 echo "Hello World" | python .claude/skills/token-formatter/scripts/count_tokens.py
 ```
+
+## TOON Format (Data Serialization → TOON for LLM Input)
+
+TOON replaces **data serialization formats** when sending to LLMs. ~40% fewer tokens.
+
+### Formats to convert → TOON:
+- **JSON** / **JSON compact**
+- **YAML**
+- **XML**
+
+### Do NOT convert to TOON:
+- **Markdown** - keep as markdown
+- **Plain text** - keep as text
+- **Code files** - keep original syntax
+- **CSV** - already compact for flat tables
+
+### TOON sweet spot:
+Uniform arrays of objects (same fields per item) from JSON/YAML/XML.
+
+**JSON:**
+```json
+{"users":[{"id":1,"name":"John","role":"admin"},{"id":2,"name":"Jane","role":"user"}]}
+```
+
+**TOON:**
+```toon
+users[2]{id,name,role}:
+  1,John,admin
+  2,Jane,user
+```
+
+### When to ask:
+"This contains JSON/YAML/XML data for LLM input. Convert to TOON for ~40% token savings?"
+
+See: `.claude/skills/document-skills/toon/SKILL.md`
 
 ## Quick Reference Card
 

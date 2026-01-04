@@ -1,140 +1,129 @@
 # Commit Command
 
-Goal: Execute a safe, strictly attributed git commit for **George Khananaev**.
+Goal: Safe, attributed git commit for the configured git user.
 
 ## 1. Identity & Attribution
-- **Author**: Must be **George Khananaev**.
-- **Check**: Verify `git config user.name` matches if running in a new environment.
-- **Credit**: No co-authors or AI attribution in the commit message unless explicitly requested.
+- **Author**: Use `git config user.name` & `git config user.email` (linked GitHub account)
+- **Credit**: No co-authors/AI attribution unless requested
 
 ## 2. Safety Protocols
-**Forbidden Files (Never Commit):**
+
+**Forbidden Files:**
 - Secrets: `.env`, `.env.*`, `*.pem`, `*.key`, `id_rsa`, `secrets.*`, `credentials.*`
-- Logs/Debug: `*.log`, `npm-debug.log`, `yarn-error.log`
-- System/Build: `.DS_Store`, `node_modules/`, `dist/`, `build/`, `__pycache__/`, `.venv/`
+- Logs: `*.log`, `npm-debug.log`, `yarn-error.log`
+- System: `.DS_Store`, `node_modules/`, `dist/`, `build/`, `__pycache__/`, `.venv/`
 
 **Critical Flags:**
-- ⛔ `no --no-verify`: Hooks must pass.
-- ⛔ `no --no-gpg-sign`: Commits should be signed if GPG is configured.
-- ⛔ `no --amend`: Create new commits for history preservation unless fixing the immediate previous commit.
+- No `--no-verify` (hooks must pass)
+- No `--no-gpg-sign` (sign if GPG configured)
+- No `--amend` (unless fixing immediate prev commit)
 
-## 3. Version Control Strategy (Interactive)
-**Prompt**: "Do you want to update the project version?"
+## 3. Version Control (Interactive)
+
+**Prompt**: "Update project version?"
 
 **If YES:**
-1. **Detect Project Type**:
-   - Node.js: `package.json`
-   - Python: `pyproject.toml`, `setup.py`
-   - Rust: `Cargo.toml`
-   - General: `VERSION` file
-2. **Determine Bump Type**:
-   - **Major** (BREAKING CHANGE): +1.0.0
-   - **Minor** (feat): +0.1.0
-   - **Patch** (fix): +0.0.1
-3. **Execute**: Update file(s) -> Stage version file -> Continue to commit.
+1. **Detect**: `package.json` | `pyproject.toml` | `setup.py` | `Cargo.toml` | `VERSION`
+2. **Bump**: Major (+1.0.0) | Minor (+0.1.0) | Patch (+0.0.1)
+3. **Execute**: Update file → Stage → Commit
 
 ## 4. Execution Flow
-1. **Status**: `git status` - Ensure clean working tree state.
-2. **Diff**: `git diff` - Review changes. **Stop** if secrets or debug code found.
-3. **Version**: Run *Version Control Strategy* (above).
-4. **Stage**: 
-   - Use `git add <file>` for precision.
-   - Use `git add -p` if files contain unrelated changes.
-   - **Avoid** `git add .` if untracked junk files exist.
-5. **Message Construction**: Apply *Conventional Commits* (see below).
-6. **Commit**: `git commit -m "..."`
-7. **Verify**: `git status` - Confirm success.
 
-## 5. Commit Message Standard (Conventional Commits)
+1. `git status` - check state
+2. `git diff` - review (**stop** if secrets/debug found)
+3. Version check (above)
+4. Stage: `git add <file>` (use `-p` for mixed changes, avoid `git add .` w/ junk)
+5. Construct message (Conventional Commits)
+6. `git commit -m "..."`
+7. `git status` - verify
+
+## 5. Commit Message Standard
+
 **Format**: `<type>(<scope>): <description>`
 
-**Types**:
-- `feat`: A new feature
-- `fix`: A bug fix
-- `docs`: Documentation only changes
-- `style`: Changes that do not affect the meaning of the code (white-space, formatting, etc)
-- `refactor`: A code change that neither fixes a bug nor adds a feature
-- `perf`: A code change that improves performance
-- `test`: Adding missing tests or correcting existing tests
-- `build`: Changes that affect the build system or external dependencies
-- `ci`: Changes to our CI configuration files and scripts
-- `chore`: Other changes that don't modify src or test files
-- `revert`: Reverts a previous commit
+| Type | Desc |
+|------|------|
+| feat | new feature |
+| fix | bug fix |
+| docs | docs only |
+| style | formatting |
+| refactor | no fix/feat |
+| perf | performance |
+| test | tests |
+| build | build/deps |
+| ci | CI config |
+| chore | other |
+| revert | revert commit |
 
-**Rules**:
-- Use imperative mood ("add" not "added").
-- No period at the end.
-- Max 72 chars for the subject line.
-- **Scope** is optional but recommended (e.g., `feat(auth): ...`).
+**Rules**: Imperative mood, no period, max 72 chars, scope opt but recommended
 
-## 6. Grouping Strategy
-- **Atomic Commits**: If `git status` shows unrelated changes (e.g., a bug fix in `api/` and a typo in `README`), split them into two separate commits.
-- **Ask User**: "I see changes in X and Y. Should these be separate commits?"
+## 6. Grouping
 
-## 7. Changelog Integration (REQUIRED)
+- **Atomic**: Split unrelated changes into separate commits
+- **Ask**: "Changes in X & Y. Separate commits?"
 
-**IMPORTANT**: After EVERY successful commit, you MUST update `CHANGELOG.md`.
+## 7. Changelog (REQUIRED)
 
-### Step 1: Check/Create CHANGELOG.md
+After EVERY commit → update `CHANGELOG.md`
 
-If `CHANGELOG.md` does NOT exist in project root, CREATE it with this template:
+### If CHANGELOG.md missing, create:
 
 ```markdown
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/),
-and this project adheres to [Semantic Versioning](https://semver.org/).
+Format: [Keep a Changelog](https://keepachangelog.com/), [SemVer](https://semver.org/)
 
 ## [Unreleased]
 
 ### Added
-
 ### Changed
-
 ### Fixed
-
 ```
 
-### Step 2: Parse the Commit Message
+### Type → Category Map
 
-Extract from commit: `<type>(<scope>): <description>`
+| Type | Category |
+|------|----------|
+| feat | Added |
+| fix | Fixed |
+| docs/style/refactor/perf/test/build/ci/chore | Changed |
+| security | Security |
+| deprecate | Deprecated |
+| remove | Removed |
 
-### Step 3: Map Type to Category
+### Entry Format
 
-| Commit Type | Changelog Category |
-|-------------|-------------------|
-| `feat` | Added |
-| `fix` | Fixed |
-| `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore` | Changed |
-| `security` | Security |
-| `deprecate` | Deprecated |
-| `remove` | Removed |
+- w/ scope: `- **scope**: Description`
+- w/o scope: `- Description`
 
-### Step 4: Add Entry to CHANGELOG.md
-
-Insert under `## [Unreleased]` in the appropriate category section:
-
-- If scope exists: `- **scope**: Description`
-- If no scope: `- Description`
-
-### Step 5: Commit the Changelog
+### Commit Changelog
 
 ```bash
 git add CHANGELOG.md
 git commit --amend --no-edit
 ```
 
-### Example
+**Ref**: `.claude/skills/project-change-log/SKILL.md`
 
-After commit `feat(auth): add OAuth2 login support`:
+## 8. README Updates
 
-```markdown
-## [Unreleased]
+### When to Update:
+- `feat`: usage/API/feature docs
+- Breaking changes: install/config/migration
+- New deps: requirements
+- New commands: usage section
+- Deprecated: mark in docs
 
-### Added
-- **auth**: Add OAuth2 login support
-```
+### Skip Update:
+- Bug fixes (no behavior change)
+- Internal refactors
+- Test additions
+- Style changes
 
-**Reference**: `.claude/skills/project-change-log/SKILL.md` for full format conventions.
+### If Needed:
+1. Ask: "README needs updating?"
+2. If YES: targeted updates only
+3. Commit: `docs(readme): update for <change>`
+
+---
+Original: ~1200 tokens | Compressed: ~550 tokens | Saved: ~54%

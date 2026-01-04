@@ -1,3 +1,9 @@
+---
+name: md
+description: Write clean, error-free markdown that IDEs and linters can parse without warnings. Use when writing documentation, README files, or skill files with code examples.
+author: George Khananaev
+---
+
 # Markdown Clean Skill
 
 Write clean, error-free markdown that IDEs and linters can parse without warnings.

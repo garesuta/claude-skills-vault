@@ -9,8 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 - **skills**: Add gemini-cli skill for local Gemini CLI interaction (run queries, compare responses)
+- **skills**: Add fastapi-senior-dev skill for production-ready FastAPI development
+- **skills**: Add testing-automation-expert skill for comprehensive testing strategies
+- **commands**: Add plan-feature command for production-grade feature planning
 
 ### Changed
+- **commands**: Rename commit.md to git-commit.md for clarity
+- **commands**: Rename push.md to git-push.md for clarity
 
 ### Fixed
 

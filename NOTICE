@@ -1,0 +1,19 @@
+Claude Skills Vault
+Copyright 2026 George Khananaev
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+ATTRIBUTION
+-----------
+When using or redistributing this project, please provide attribution by:
+
+1. Keeping the LICENSE file intact in any copies or substantial portions
+2. Including a link to the original repository:
+   https://github.com/georgekhananaev/claude-skills-vault
+
+THIRD-PARTY CREDITS
+-------------------
+The following skills are sourced from ComposioHQ (https://github.com/ComposioHQ):
+- document-skills (docx, pdf, pptx, xlsx)
+- pydantic-model
+- skill-creator

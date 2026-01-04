@@ -70,3 +70,35 @@ Goal: Execute a safe, strictly attributed git commit for **George Khananaev**.
 ## 6. Grouping Strategy
 - **Atomic Commits**: If `git status` shows unrelated changes (e.g., a bug fix in `api/` and a typo in `README`), split them into two separate commits.
 - **Ask User**: "I see changes in X and Y. Should these be separate commits?"
+
+## 7. Changelog Integration
+
+After successful commit, update `CHANGELOG.md` using the `project-change-log` skill:
+
+1. **Check**: Does `CHANGELOG.md` exist in project root?
+   - If no: Create from template (see skill)
+   - If yes: Read current content
+
+2. **Parse Commit**: Extract type, scope, and description from commit message
+
+3. **Map to Category**:
+   | Commit Type | Changelog Category |
+   |-------------|-------------------|
+   | `feat` | Added |
+   | `fix` | Fixed |
+   | `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore` | Changed |
+   | `security` | Security |
+
+4. **Add Entry**: Insert under `[Unreleased]` in appropriate category:
+   ```markdown
+   ### Added
+   - **scope**: Description from commit
+   ```
+
+5. **Stage**: `git add CHANGELOG.md`
+
+6. **Amend or New Commit**:
+   - If changelog update is minor: Amend the commit with `--amend --no-edit`
+   - If user prefers: Create separate `docs(changelog): update changelog` commit
+
+**Note**: Reference `.claude/skills/project-change-log/SKILL.md` for full changelog format and conventions.

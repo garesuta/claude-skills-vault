@@ -43,6 +43,7 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 | `/git-push` | Git push with uncommitted changes check and changelog versioning |
 | `/create-skill` | Create new skills from templates |
 | `/create-pr` | Prepare GitHub pull request with essential details |
+| `/git-review-pr` | Review PR for skills/commands/MCP - validates docs, quality, formatting |
 | `/plan-feature` | Production-grade feature planning with multi-source validation |
 
 ## MCP Servers

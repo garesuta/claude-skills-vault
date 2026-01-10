@@ -8,11 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
-- **commands**: Add git-review-pr command for comprehensive PR review (validates docs, quality, token optimization, markdown)
 
 ### Changed
 
 ### Fixed
+
+## [1.0.8] - 2026-01-10
+
+### Added
+- **commands**: Add git-review-pr command for comprehensive PR review (validates docs, quality, token optimization, markdown)
 
 ## [1.0.7] - 2026-01-10
 

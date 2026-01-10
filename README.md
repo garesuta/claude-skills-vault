@@ -10,13 +10,17 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 
 | Skill | Description |
 |-------|-------------|
+| **beautiful-code** | Multi-language code quality standards for TypeScript, Python, Go, and Rust |
 | **code-reviewer** | Comprehensive code review for quality, security, and performance |
 | **doc-navigator** | Efficient codebase documentation navigation during research |
 | **fastapi-senior-dev** | Senior Python Backend Engineer skill for production-ready FastAPI |
 | **gemini-cli** | Run Gemini CLI for AI queries and comparisons |
+| **materialreacttable-mastery** | Material React Table V3 expert for MUI data tables with CRUD and virtualization |
 | **mcp-builder** | Guide for creating high-quality MCP servers (Python/TypeScript) |
+| **nextjs-senior-dev** | Senior Next.js 15/16 Engineer skill for App Router, RSC patterns, and performance |
 | **pep8** | Python 3.11+ style enforcement with PEP 8, type hints, and check scripts |
 | **project-change-log** | Automatic CHANGELOG.md maintenance following Keep a Changelog |
+| **prompt-compressor** | Compress verbose prompts for 40-60% token reduction |
 | **pydantic-model** | Pydantic v2 model patterns for validation and MongoDB |
 | **skill-creator** | Guide for creating Claude Code skills |
 | **system-architect** | System architecture patterns and design guidance |

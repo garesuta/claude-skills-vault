@@ -10,11 +10,13 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 
 | Skill | Description |
 |-------|-------------|
+| **code-reviewer** | Comprehensive code review for quality, security, and performance |
 | **doc-navigator** | Efficient codebase documentation navigation during research |
 | **fastapi-senior-dev** | Senior Python Backend Engineer skill for production-ready FastAPI |
 | **gemini-cli** | Run Gemini CLI for AI queries and comparisons |
 | **mcp-builder** | Guide for creating high-quality MCP servers (Python/TypeScript) |
 | **pep8** | Python 3.11+ style enforcement with PEP 8, type hints, and check scripts |
+| **project-change-log** | Automatic CHANGELOG.md maintenance following Keep a Changelog |
 | **pydantic-model** | Pydantic v2 model patterns for validation and MongoDB |
 | **skill-creator** | Guide for creating Claude Code skills |
 | **system-architect** | System architecture patterns and design guidance |
@@ -89,6 +91,7 @@ These servers are still functional but no longer actively maintained:
 | **[atlassian](mcp-servers/atlassian)** | Jira and Confluence integration | [Atlassian](https://mcp.atlassian.com) |
 | **[aws](mcp-servers/aws)** | AWS Labs MCP servers (64+ servers) | [GitHub](https://github.com/awslabs/mcp) |
 | **[canva](mcp-servers/canva)** | Canva design platform | [Canva](https://mcp.canva.com) |
+| **[chrome-devtools](mcp-servers/chrome-devtools)** | Browser automation, performance analysis, debugging | [GitHub](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
 | **[cloudflare](mcp-servers/cloudflare)** | Cloudflare Workers, KV, R2, D1 | [Docs](https://developers.cloudflare.com/agents/model-context-protocol/) |
 | **[codex](mcp-servers/codex)** | OpenAI Codex integration | [OpenAI](https://platform.openai.com/) |
 | **[context7](mcp-servers/context7)** | Library documentation fetching | [Upstash](https://upstash.com/docs/context7) |

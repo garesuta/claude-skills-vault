@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **readme**: Add code-reviewer and project-change-log skills to Core Skills
+- **readme**: Add chrome-devtools MCP server to Third-Party servers
 
 ### Changed
 

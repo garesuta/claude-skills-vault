@@ -19,11 +19,15 @@ A curated collection of skills, commands, and MCP servers for Claude Code.
 | **github-cli** | Safety-first GitHub CLI wrapper with risk classification and confirmation protocols |
 | **materialreacttable-mastery** | Material React Table V3 expert for MUI data tables with CRUD and virtualization |
 | **mcp-builder** | Guide for creating high-quality MCP servers (Python/TypeScript) |
+| **next-cache-components** | Next.js 16 Cache Components — PPR, `use cache` directive, cacheLife, cacheTag, updateTag |
+| **next-upgrade** | Upgrade Next.js to the latest version following official migration guides and codemods |
 | **nextjs-senior-dev** | Senior Next.js 15/16 Engineer skill for App Router, RSC patterns, and performance |
 | **plan-to-tdd** | Transform feature plans into TDD implementation with Outside-In methodology |
 | **project-change-log** | Automatic CHANGELOG.md maintenance following Keep a Changelog |
 | **pydantic-model** | Pydantic v2 model patterns for validation and MongoDB |
+| **react-best-practices** | React/Next.js performance optimization — 45 Vercel Engineering rules across 8 categories |
 | **semantic-coding** | Refactor hardcoded styles to semantic design tokens (colors, typography, spacing, sizing) |
+| **senior-backend** | Node.js/Express/Fastify backend patterns — REST APIs, database optimization, security, load testing |
 | **skill-creator** | Guide for creating Claude Code skills |
 | **supabase-cli** | CLI automation for Supabase migrations, Edge Functions, and type generation |
 | **system-architect** | System architecture patterns and design guidance |

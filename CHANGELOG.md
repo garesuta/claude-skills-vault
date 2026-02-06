@@ -8,8 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **skills**: Add react-best-practices skill — 45 Vercel Engineering performance rules across 8 categories (waterfalls, bundle size, server-side, client-side, re-render, rendering, JS perf, advanced patterns)
+- **skills**: Add next-cache-components skill — Next.js 16 Cache Components with PPR, `use cache` directive, cacheLife, cacheTag, updateTag
+- **skills**: Add next-upgrade skill — Next.js version upgrade workflow with codemods and migration guides
+- **skills**: Add senior-backend skill — Node.js/Express/Fastify backend patterns with API scaffolding, database migration, and load testing scripts
 
 ### Changed
+- **skills**: Enhance nextjs-senior-dev with 3 new references: scripts (next/script, 3rd-party loading), self-hosting (Docker standalone, multi-instance ISR), debug tricks (MCP debugging)
 
 ### Fixed
 

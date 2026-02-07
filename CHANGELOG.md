@@ -8,11 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
-- **skills**: Add monday-com skill — Monday.com workspace management via official MCP server with direct API fallback, smart tool selection, safety classification, and comprehensive GraphQL reference docs
 
 ### Changed
 
 ### Fixed
+
+## [1.1.6] - 2026-02-08
+
+### Added
+- **skills**: Add monday-com skill — Monday.com workspace management via official MCP server with direct API fallback, smart tool selection, safety classification, and comprehensive GraphQL reference docs
 
 ## [1.1.5] - 2026-02-07
 

@@ -8,11 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
-- **skills**: Add file-converter skill — 8 cross-platform conversion scripts (image resize/convert, markdown to HTML/PDF, HTML to markdown, CSV/JSON/YAML/TOML/XML, SVG, base64, text encoding) with shared platform_utils for native library loading on macOS/Linux/Windows, dual-AI audited (Gemini + Codex), 51 passing tests
 
 ### Changed
 
 ### Fixed
+
+## [1.1.7] - 2026-02-08
+
+### Added
+- **skills**: Add file-converter skill — 8 cross-platform conversion scripts (image resize/convert, markdown to HTML/PDF, HTML to markdown, CSV/JSON/YAML/TOML/XML, SVG, base64, text encoding) with shared platform_utils for native library loading on macOS/Linux/Windows, dual-AI audited (Gemini + Codex), 51 passing tests
 
 ## [1.1.6] - 2026-02-08
 

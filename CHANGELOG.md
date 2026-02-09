@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **skills**: Add salesforce-cli skill — safety-first Salesforce CLI (`sf` v2) wrapper with 4-tier risk classification (Safe/Write/Destructive/Forbidden), 4 safety-enforcing scripts (query, deploy, export, org-guard), 5 reference docs (safety rules, SOQL/SOSL, MCP integration, auth flows, data operations), production guardrails with typed alias confirmation, fail-safe org detection, PII warnings, destructive deploy blocking, governor limit checks, file-converter integration, and dual-AI security audit (Gemini 2.5 Pro + Codex GPT-5.2) with all critical/important findings fixed
 
 ### Changed
 
